@@ -17,7 +17,7 @@ client.collectDefaultMetrics();
 const created = new client.Counter({ name: 'urls_created_total', help: 'Total short URLs created' });
 const redirects = new client.Counter({ name: 'redirects_total', help: 'Total redirects served' });
 
-app.get('/', (req, res) => res.send(`URL Shortener ${VERSION} - pod: ${os.hostname()}`));
+app.get('/', (req, res) => res.send(`URL Shortener ${VERSION} - Sham's DevOps Project - pod: ${os.hostname()}`));
 app.get('/health', (req, res) => res.send('OK'));
 
 app.get('/metrics', async (req, res) => {
